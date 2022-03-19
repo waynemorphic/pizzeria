@@ -42,3 +42,14 @@ dd {
 .clear {
     color: bisque;
 }
+
+
+
+p {
+    text-align: center;
+    font-family: 'Dekko';
+    font-size: 1.5rem;
+    color: bisque;
+    float: right;
+    padding: 20px
+}
