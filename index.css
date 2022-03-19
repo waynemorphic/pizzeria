@@ -14,13 +14,31 @@ body {
    
 }
 
-.menu {
+.menu-table {
     
-    width: 550px;
-    height: 700px;
+    width: 500px;
     background: bisque;
     border-radius: 47px;
 }
 
+.menu-heading {
+    text-align: center;
+    font-family: 'Dekko';
+    font-size: 2rem;
+}
     
-    
+dt {
+    font-size: 1.5rem;
+    margin-left: 10%;
+    font-family: 'Dekko';
+}
+
+dd {
+    font-size: 1.5rem;
+    margin-left: 15%;
+    font-family: 'Dekko';
+}
+   
+.clear {
+    color: bisque;
+}
