@@ -1,6 +1,33 @@
 body {
     background: #FF4E02;
-    width: 1920px;
-    height: 1080px;
+    
     box-sizing: border-box;
+}
+
+.name-1 {
+    position: absolute;
+   
+    font-family: 'Dekko';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 51px;
+    color: #FFFFFF;
+    top: -21px;
+    left: 480px;
+
+}
+
+.name-2 {
+    position: absolute;
+   
+    font-family: 'Dekko';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+    color: #FFFFFF;
+    top: 13px;
+    left: 513px;
+    
 }
