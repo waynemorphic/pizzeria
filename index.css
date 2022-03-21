@@ -15,10 +15,10 @@ body {
 }
 
 .menu-table {
-    
     width: 500px;
     background: bisque;
     border-radius: 47px;
+    
 }
 
 .menu-heading {
@@ -43,8 +43,6 @@ dd {
     color: bisque;
 }
 
-
-
 p {
     text-align: center;
     font-family: 'Dekko';
@@ -52,4 +50,12 @@ p {
     color: bisque;
     float: right;
     padding: 20px
+}
+
+#order-display {
+    display: none;
+    text-align: center;
+    font-family: 'Dekko';
+    font-size: 1.5rem;
+
 }
