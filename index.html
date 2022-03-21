@@ -21,11 +21,11 @@
                     <div class="image">
                         <img src="https://images.unsplash.com/photo-1520201163981-8cc95007dd2a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" class="img-thumbnail" alt="slice of pizza"><br><br>
                         <div class="form-floating">
-                            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                                <option selected>Choose Pizza Size</option>
-                                <option value="1">Small</option>
-                                <option value="2">Medium</option>
-                                <option value="3">Large</option>
+                            <select class="form-select" id="size" aria-label="Floating label select example">
+                                <option>Choose Pizza Size</option>
+                                <option value="Small">Small</option>
+                                <option value="Medium">Medium</option>
+                                <option value="Large">Large</option>
                             </select>
                             <label for="floatingSelect"></label>
                         </div>
@@ -35,28 +35,28 @@
                     <div class="image">
                         <img src="https://images.unsplash.com/photo-1584365685547-9a5fb6f3a70c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nzd8fHBpenphfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" class="img-thumbnail" alt="pizza slices on a board"><br><br>
                         <div class="form-floating">
-                            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                                <option selected>Choose Crust</option>
-                                <option value="1">Crispy</option>
-                                <option value="2">Stuffed</option>
-                                <option value="3">Gluten-Free</option>
+                            <select class="form-select" id="crust" aria-label="Floating label select example">
+                                <option>Choose Crust</option>
+                                <option value="Crispy">Crispy</option>
+                                <option value="Stuffed">Stuffed</option>
+                                <option value="Gluten-Free">Gluten-Free</option>
                             </select>
                             <label for="floatingSelect"></label><br><br>
                         </div>
                     </div>
                     <div class="row">
-                        <button type="button" class="btn btn-primary">Order</button>
+                        <button type="submit" class="btn btn-primary">Order</button>
                     </div>
                 </div>
                 <div class="col">
                     <div class="image">
                         <img src="https://images.unsplash.com/photo-1604382355076-af4b0eb60143?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" class="img-thumbnail" alt="pizza with olives toppings"><br><br>
                         <div class="form-floating">
-                            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                                <option selected>Choose Toppings</option>
-                                <option value="1">Cheese</option>
-                                <option value="2">Pineapple</option>
-                                <option value="3">Meaty</option>
+                            <select class="form-select" id="toppings" aria-label="Floating label select example">
+                                <option>Choose Toppings</option>
+                                <option value="Cheese">Cheese</option>
+                                <option value="Pineapple">Pineapple</option>
+                                <option value="Meaty">Meaty</option>
                             </select>
                             <label for="floatingSelect"></label>
                         </div>
@@ -121,8 +121,17 @@
                         </div>
                     </div>
                 </div> 
-            </div>        
-        </div>
+            </div>     
+        </div> <!--This toast will show the order and the delivery details-->
+        <div id="order-display" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-body">
+              Hello, world! This is a toast message.
+              <div class="mt-2 pt-2 border-top">
+                <button type="button" class="btn btn-primary btn-sm">Take action</button>
+                <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="toast">Close</button>
+              </div>
+            </div>
+          </div>
         <div>
             <p>
                 Slices Pizzeria | Oloitoktok Rd, Kileleshwa<br>
