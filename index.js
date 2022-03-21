@@ -2,15 +2,17 @@ let d = document;
 console.log("I am the pizza master");
 
 // Business Logic
-function PizzaOrder(size, crust, toppings){
+function PizzaOrder(size, crust, toppings, prices){
     this.pizzaSize = size;
     this.pizzaCrust = crust;
     this.pizzaToppings = toppings;
+    this.Prices = prices; // Added prices parameter for the pizza prices
 }
+
 
 //Here we want to return the full order of the customer in one line
 PizzaOrder.prototype.customerOrder = function(){
-    return this.pizzaSize + this.pizzaCrust + this.pizzaToppings;
+    return this.pizzaSize + this.pizzaCrust + this.pizzaToppings + this.Prices;
 }
 
 
@@ -23,13 +25,117 @@ $(document).ready(function(){
         let choosenPizzaCrust = $('#crust option:selected').val();
         let choosenPizzaToppings = $('#toppings option:selected').val();
 
-        //Here we define the sizes, crust types and toppings
-        
-
         let choosenPizza = new PizzaOrder(choosenPizzaSize, choosenPizzaCrust, choosenPizzaToppings);
 
+        //Here we define the sizes, crust types and toppings
+        function pizzaPrices (prices){
+            let Size = {
+                'Small': 550,
+                'Medium': 750,
+                'Large': 1350,
+            }
+            let Crust = {
+                'Crispy': 350,
+                'Stuffed': 400,
+                'GlutenFree': 350
+            }
+            let Toppings = {
+                'Cheese': 150,
+                'Pineapple': 100,
+                'Meaty': 200,
+            }
+            let choosenPizzaSize = $('#size option:selected').val();
+            let choosenPizzaCrust = $('#crust option:selected').val();
+            let choosenPizzaToppings = $('#toppings option:selected').val();
+            
+            if (choosenPizzaSize == 'Small' && choosenPizzaCrust == 'Crispy' && choosenPizzaToppings == 'Cheese'){
+                let prices = (Size.Small + Crust.Crispy + Toppings.Cheese)
+                return prices;
+            }
+            if (choosenPizzaSize == 'Small' && choosenPizzaCrust == 'Crispy' && choosenPizzaToppings == 'Pineapple'){
+                let prices = (Size.Small + Crust.Crispy + Toppings.Pineapple)
+                return prices;
+            }
+            if (choosenPizzaSize == 'Small' && choosenPizzaCrust == 'Crispy' && choosenPizzaToppings == 'Meaty'){
+                let prices = (Size.Small + Crust.Crispy + Toppings.Meaty)
+                return prices;
+            }
+            if (choosenPizzaSize == 'Small' && choosenPizzaCrust == 'Stuffed' && choosenPizzaToppings == 'Pineapple'){
+                let prices = (Size.Small + Crust.Stuffed + Toppings.Pineapple)
+                return prices;
+            }
+            if (choosenPizzaSize == 'Small' && choosenPizzaCrust == 'Stuffed' && choosenPizzaToppings == 'Meaty'){
+                let prices = (Size.Small + Crust.Stuffed + Toppings.Meaty)
+                return prices;
+            }
+            if (choosenPizzaSize == 'Small' && choosenPizzaCrust == 'Stuffed' && choosenPizzaToppings == 'Cheese'){
+                let prices = (Size.Small + Crust.Stuffed + Toppings.Cheese)
+                return prices;
+            }
+            if (choosenPizzaSize == 'Small' && choosenPizzaCrust == 'Gluten-Free' && choosenPizzaToppings == 'Cheese'){
+                let prices = (Size.Small + Crust.Gluten-Free + Toppings.Cheese)
+                return prices;
+            }
+            if (choosenPizzaSize == 'Small' && choosenPizzaCrust == 'Gluten-Free' && choosenPizzaToppings == 'Meaty'){
+                let prices = (Size.Small + Crust.Gluten-Free + Toppings.Meaty)
+                return prices;
+            }
+            if (choosenPizzaSize == 'Small' && choosenPizzaCrust == 'Gluten-Free' && choosenPizzaToppings == 'Pineapple'){
+                let prices = (Size.Small + Crust.Gluten-Free + Toppings.Pineapple)
+                return prices;
+            }
+
+
+            if (choosenPizzaSize == 'Medium' && choosenPizzaCrust == 'Crispy' && choosenPizzaToppings == 'Cheese'){
+                let prices = (Size.Medium + Crust.Crispy + Toppings.Cheese)
+                return prices;
+            }
+            if (choosenPizzaSize == 'Medium' && choosenPizzaCrust == 'Crispy' && choosenPizzaToppings == 'Pineapple'){
+                let prices = (Size.Medium + Crust.Crispy + Toppings.Pineapple)
+                return prices;
+            }
+            if (choosenPizzaSize == 'Medium' && choosenPizzaCrust == 'Crispy' && choosenPizzaToppings == 'Meaty'){
+                let prices = (Size.Medium + Crust.Crispy + Toppings.Meaty)
+                return prices;
+            }
+            if (choosenPizzaSize == 'Medium' && choosenPizzaCrust == 'Stuffed' && choosenPizzaToppings == 'Pineapple'){
+                let prices = (Size.Medium + Crust.Stuffed + Toppings.Pineapple)
+                return prices;
+            }
+            if (choosenPizzaSize == 'Medium' && choosenPizzaCrust == 'Stuffed' && choosenPizzaToppings == 'Meaty'){
+                let prices = (Size.Medium + Crust.Stuffed + Toppings.Meaty)
+                return prices;
+            }
+            if (choosenPizzaSize == 'Medium' && choosenPizzaCrust == 'Stuffed' && choosenPizzaToppings == 'Cheese'){
+                let prices = (Size.Medium + Crust.Stuffed + Toppings.Cheese)
+                return prices;
+            }
+            if (choosenPizzaSize == 'Medium' && choosenPizzaCrust == 'Gluten-Free' && choosenPizzaToppings == 'Cheese'){
+                let prices = (Size.Medium + Crust.Gluten-Free + Toppings.Cheese)
+                return prices;
+            }
+            if (choosenPizzaSize == 'Medium' && choosenPizzaCrust == 'Gluten-Free' && choosenPizzaToppings == 'Meaty'){
+                let prices = (Size.Small + Crust.Gluten-Free + Toppings.Meaty)
+                return prices;
+            }
+            if (choosenPizzaSize == 'Medium' && choosenPizzaCrust == 'Gluten-Free' && choosenPizzaToppings == 'Pineapple'){
+                let prices = (Size.Medium + Crust.Gluten-Free + Toppings.Pineapple)
+                return prices;
+            }
+
+    }
+    // console.log(pizzaPrices())
+            
+            
+
+           
+           
+       
+
+
+
         $('p#order-display').append(choosenPizza.customerOrder()) //Here, we will display the customer's order in the website
-        console.log(choosenPizza.customerOrder());
+        // console.log(choosenPizza.customerOrder());
        
         $('#size option:selected').val();
         $('#crust option:selected').val();
