@@ -47,6 +47,18 @@ $(document).ready(function(){
             let choosenPizzaSize = $('#size option:selected').val();
             let choosenPizzaCrust = $('#crust option:selected').val();
             let choosenPizzaToppings = $('#toppings option:selected').val();
+
+
+            if(choosenPizzaSize ===""){
+                alert("Select Pizza Size")
+                return;
+            }
+
+            let sp=Size[choosenPizzaSize]
+            let cp=Crust[choosenPizzaCrust] || 0 // Here, if customer does not choose anything, it returns false
+            let tp=Toppings[choosenPizzaToppings]||0 //That is, if one is true or the other is false
+            
+            console.log(sp+tp+cp)
             
             if (choosenPizzaSize == 'Small' && choosenPizzaCrust == 'Crispy' && choosenPizzaToppings == 'Cheese'){
                 let prices = (Size.Small + Crust.Crispy + Toppings.Cheese)
@@ -77,11 +89,11 @@ $(document).ready(function(){
                 return prices;
             }
             if (choosenPizzaSize == 'Small' && choosenPizzaCrust == 'Gluten-Free' && choosenPizzaToppings == 'Meaty'){
-                let prices = (Size.Small + Crust.Gluten-Free + Toppings.Meaty)
+                let prices = (Size.Small + Crust.GlutenFree + Toppings.Meaty)
                 return prices;
             }
             if (choosenPizzaSize == 'Small' && choosenPizzaCrust == 'Gluten-Free' && choosenPizzaToppings == 'Pineapple'){
-                let prices = (Size.Small + Crust.Gluten-Free + Toppings.Pineapple)
+                let prices = (Size.Small + Crust.GlutenFree + Toppings.Pineapple)
                 return prices;
             }
 
@@ -111,15 +123,15 @@ $(document).ready(function(){
                 return prices;
             }
             if (choosenPizzaSize == 'Medium' && choosenPizzaCrust == 'Gluten-Free' && choosenPizzaToppings == 'Cheese'){
-                let prices = (Size.Medium + Crust.Gluten-Free + Toppings.Cheese)
+                let prices = (Size.Medium + Crust.GlutenFree + Toppings.Cheese)
                 return prices;
             }
             if (choosenPizzaSize == 'Medium' && choosenPizzaCrust == 'Gluten-Free' && choosenPizzaToppings == 'Meaty'){
-                let prices = (Size.Small + Crust.Gluten-Free + Toppings.Meaty)
+                let prices = (Size.Small + Crust.GlutenFree + Toppings.Meaty)
                 return prices;
             }
             if (choosenPizzaSize == 'Medium' && choosenPizzaCrust == 'Gluten-Free' && choosenPizzaToppings == 'Pineapple'){
-                let prices = (Size.Medium + Crust.Gluten-Free + Toppings.Pineapple)
+                let prices = (Size.Medium + Crust.GlutenFree + Toppings.Pineapple)
                 return prices;
             }
 
@@ -149,20 +161,21 @@ $(document).ready(function(){
                 return prices;
             }
             if (choosenPizzaSize == 'Large' && choosenPizzaCrust == 'Gluten-Free' && choosenPizzaToppings == 'Cheese'){
-                let prices = (Size.Large + Crust.Gluten-Free + Toppings.Cheese)
+                let prices = (Size.Large + Crust.GlutenFree + Toppings.Cheese)
                 return prices;
             }
             if (choosenPizzaSize == 'Large' && choosenPizzaCrust == 'Gluten-Free' && choosenPizzaToppings == 'Meaty'){
-                let prices = (Size.Large + Crust.Gluten-Free + Toppings.Meaty)
+                let prices = (Size.Large + Crust.GlutenFree + Toppings.Meaty)
                 return prices;
             }
             if (choosenPizzaSize == 'Large' && choosenPizzaCrust == 'Gluten-Free' && choosenPizzaToppings == 'Pineapple'){
-                let prices = (Size.Large + Crust.Gluten-Free + Toppings.Pineapple)
+                let prices = (Size.Large + Crust.GlutenFree + Toppings.Pineapple)
                 return prices;
             }
 
     }
     // console.log(pizzaPrices())
+    pizzaPrices()
             
             
 
