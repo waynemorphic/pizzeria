@@ -1,30 +1,37 @@
 body {
     background: #FF4E02;
     box-sizing: border-box;
+    background-image: url('https://images.pexels.com/photos/1082343/pexels-photo-1082343.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-position: right;
 }
 
 .name {
     position: relative;
-    font-family: 'Dekko';
+    font-family:monospace;
     font-style: normal;
     font-weight: 400;
     font-size: 36px;
     text-align: center;
-    color: bisque;
+    color: black;
+    padding: 10px;
    
 }
 
 .menu-table {
-    width: 500px;
-    background: bisque;
-    border-radius: 47px;
-    
+    border: 1px solid bisque;
+    color: white;
+    font-family: 'dekko';
+    margin-top: 10px;
+    width: 600px;
+    height: 200px;
+    background-color: #FE6D01;
 }
 
 .menu-heading {
     text-align: center;
     font-family: 'Dekko';
-    font-size: 2rem;
+    font-size: 1.5rem;
+    color: white;
 }
     
 dt {
@@ -52,6 +59,19 @@ p {
     padding: 20px
 }
 
+.order-table {
+    border: 1px solid bisque;
+    color: white;
+    font-family: 'dekko';
+    margin-top: 10px;
+    width: 300px;
+    
+    background-color: #FE6D01;
+
+}
+th, td {
+    border: 1px solid yellow;
+}
 #order-display {
     display: none;
     text-align: center;
