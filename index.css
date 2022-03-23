@@ -7,20 +7,21 @@ body {
 
 .name {
     position: relative;
-    font-family:monospace;
+    font-family: 'Indie Flower', cursive;
     font-style: normal;
     font-weight: 400;
     font-size: 36px;
-    text-align: center;
-    color: black;
+    text-align: left;
+    color:brown;
     padding: 10px;
+    margin-left: 100px;
    
 }
 
 .menu-table {
     border: 1px solid bisque;
     color: white;
-    font-family: 'dekko';
+    font-family: 'Hubali', cursive;
     margin-top: 10px;
     width: 600px;
     height: 200px;
@@ -29,7 +30,7 @@ body {
 
 .menu-heading {
     text-align: center;
-    font-family: 'Dekko';
+    font-family: 'Hubali', cursive;
     font-size: 1.5rem;
     color: white;
 }
@@ -37,13 +38,13 @@ body {
 dt {
     font-size: 1.5rem;
     margin-left: 10%;
-    font-family: 'Dekko';
+    font-family: 'Hubali', cursive;
 }
 
 dd {
     font-size: 1.5rem;
     margin-left: 15%;
-    font-family: 'Dekko';
+    font-family: 'Hubali', cursive;
 }
    
 .clear {
@@ -52,7 +53,7 @@ dd {
 
 p {
     text-align: center;
-    font-family: 'Dekko';
+    font-family: 'Hubali', cursive;
     font-size: 1.5rem;
     color: bisque;
     float: right;
@@ -62,20 +63,13 @@ p {
 .order-table {
     border: 1px solid bisque;
     color: white;
-    font-family: 'dekko';
+    font-family: 'Hubali', cursive;
     margin-top: 10px;
     width: 300px;
-    
     background-color: #FE6D01;
+    display: none;
 
 }
 th, td {
     border: 1px solid yellow;
-}
-#order-display {
-    display: none;
-    text-align: center;
-    font-family: 'Dekko';
-    font-size: 1.5rem;
-
 }
