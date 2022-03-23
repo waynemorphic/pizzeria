@@ -13,9 +13,7 @@
         <div>
             <h3 class="name">TWIN SLICES PIZZERIA</h3>
         </div>
-       
-       
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col">
                     <div class="image">
@@ -44,9 +42,6 @@
                             <label for="floatingSelect"></label><br><br>
                         </div>
                     </div>
-                    <div class="row">
-                        <button type="submit" class="btn btn-primary">Order</button>
-                    </div>
                 </div>
                 <div class="col">
                     <div class="image">
@@ -63,78 +58,54 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="menu-table">
-                        <h5 class="menu-heading">Menu</h5>
-                        <div class="row">
-                            <div class="col">
-                                <dl>
-                                    <dt>Sizes</dt>
-                                    <dd>Small</dd>
-                                    <dd>Medium</dd>
-                                    <dd>Large</dd>
-                                </dl>
-                            </div>
-                            <div class="col">
-                                <dl>
-                                    <dt class="clear">Prices</dt>
-                                    <dd>550/=</dd>
-                                    <dd>750/=</dd>
-                                    <dd>1350/=</dd>
-                                </dl>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <dl>
-                                    <dt>Crust</dt>
-                                    <dd>Crispy</dd>
-                                    <dd>Stuffed</dd>
-                                    <dd>Gluten-Free</dd>
-                                </dl>
-                            </div>
-                            <div class="col">
-                                <dl>
-                                    <dt class="clear">Prices</dt>
-                                    <dd>350/=</dd>
-                                    <dd>400/=</dd>
-                                    <dd>350/=</dd>
-                                </dl>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <dl>
-                                    <dt>Toppings</dt>
-                                    <dd>Cheese</dd>
-                                    <dd>Pineapple</dd>
-                                    <dd>Meaty</dd>
-                                </dl>
-                            </div>
-                            <div class="col">
-                                <dl>
-                                    <dt class="clear">Prices</dt>
-                                    <dd>150/=</dd>
-                                    <dd>100</dd>
-                                    <dd>200</dd>
-                                </dl>
-                            </div>
-                        </div>
+                    <div class="col">
+                        <table class="menu-table">
+                            <h6 class="menu-heading">Twin Slices Pizzeria Menu</h6>
+                            <tr>
+                                <th scope="row">Pizza Size</th>
+                                <th scope="row">Small - 550/=</th>
+                                <th scope="row">Medium - 750/=</th>
+                                <th scope="row">Large - 1350/=</th>
+                            </tr>
+                            <tr>
+                                <th scope="row">Pizza Crust</th>
+                                <th scope="row">Crispy - 350/=</th>
+                                <th scope="row">Stuffed - 400/=</th>
+                                <th scope="row">Gluten-Free - 350/=</th>                              
+                            </tr>
+                                <th scope="row">Toppings</th>
+                                <th scope="row">Cheese - 150/=</th>
+                                <th scope="row">Pineapple - 100/=</th>
+                                <th scope="row">Meaty - 200/=</th>
+                            </tr>
+                        </table>
                     </div>
                 </div> 
-            </div>     
-        </div> <!--This toast will show the order and the delivery details-->
-        <div id="order-display" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-            <div class="toast-body">
-              Hello, world! This is a toast message.
-              <div class="mt-2 pt-2 border-top">
-                <button type="button" class="btn btn-primary btn-sm">Take action</button>
-                <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="toast">Close</button>
-              </div>
-            </div>
-          </div>
-        <div>
+            </div> 
+                    <div class="col">
+                        <button id= 'btn' type="submit" class="btn btn-primary">Order</button>
+                    </div>
+                    <div class="col">
+                        <table class='order-table'>
+                            <caption style="color: white; text-align: right">Your Order Summary</caption>
+                            <tr>
+                                <th scope="col">Pizza Size</th>
+                                <th scope="col">Pizza Crust</th>
+                                <th scope="col">Pizza Toppings</th>
+                                <th scope="col">Order Total</th>
+                            </tr>
+                            <tr>
+                                <th scope="row"></th>
+                                <th scope="row"></th>
+                                <th scope="row"></th>
+                                <th scope="row"></th>
+                            </tr>
+                        </table>
+                    </div>
+        </div>     
+        <div class="container"> 
             <p>
-                Slices Pizzeria | Oloitoktok Rd, Kileleshwa<br>
+                Twin Slices Pizzeria | Oloitoktok Rd, Kileleshwa<br>
                 waynemorphic@github.io<br>
             </p> 
         </div>          
