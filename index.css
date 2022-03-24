@@ -29,10 +29,10 @@ body {
 }
 
 .menu-heading {
-    text-align: center;
+    text-align: left;
     font-family: 'Hubali', cursive;
     font-size: 1.5rem;
-    color: white;
+    color: black;
 }
     
 dt {
@@ -82,3 +82,6 @@ p {
 th, td {
     border: 1px solid yellow;
 }
+
+
+
