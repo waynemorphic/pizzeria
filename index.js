@@ -19,8 +19,8 @@ PizzaOrder.prototype.customerOrder = function(){
 $(document).ready(function(){
 $('#btn').click(function(){
     $('.order-table').show()
-})
-}) 
+});
+});
 
 
 d.querySelector('#btn').addEventListener('click', pizzaPrices)
@@ -59,19 +59,20 @@ d.querySelector('#btn').addEventListener('click', pizzaPrices)
         let totalPrice = sizePrice + crustPrice + toppingsPrice;
         console.log(totalPrice);
 
-        let orderSummary = ('Size: ' + choosenPizzaSize + ' Price: ' + sizePrice + ' Crust: ' + choosenPizzaCrust + ' Price: ' + crustPrice + ' Toppings: ' + choosenPizzaToppings + ' Price' + toppingsPrice + ' Total Order Price: ' + totalPrice)
+        //let orderSummary = ('Size: ' + choosenPizzaSize + ' Price: ' + sizePrice + ' Crust: ' + choosenPizzaCrust + ' Price: ' + crustPrice + ' Toppings: ' + choosenPizzaToppings + ' Price' + toppingsPrice + ' Total Order Price: ' + totalPrice)
         //console.log(orderSummary)
 
-        let sz = document.querySelector('#sz');
+        //Add the values from the program into the order summary table 
+        let sz = document.querySelector('#sz'); //size
         sz.append(choosenPizzaSize);
 
-        let cr = document.querySelector('#cr');
+        let cr = document.querySelector('#cr'); //crust
         cr.append(choosenPizzaCrust)
 
-        let tps = document.querySelector( '#tps' );
+        let tps = document.querySelector( '#tps' ); //toppings
         tps.append(choosenPizzaToppings);
 
-        let op = document.querySelector('#order-total');
+        let op = document.querySelector('#order-total'); //order price/total
         op.append(totalPrice);
 
         //let customerOrderSummary = <tr> + "<th #='size'>" + choosenPizzaSize + ' -  ' + sizePrice + "</th>" + "<th #='crust'>" + choosenPizzaCrust + ' -  ' + crustPrice + "</th>" + "<th #='toppings'>" + choosenPizzaToppings + ' -  ' + toppingsPrice + "</th>" + "<th #='order-total'>" + totalPrice + "</th>" + '</tr>';
@@ -79,6 +80,14 @@ d.querySelector('#btn').addEventListener('click', pizzaPrices)
         //return customerOrderSummary.table;
         
     }
+
+    //Adding a delivery location
+    $(document).ready(function(){
+        $('#btnn').click(function(){
+            $('.order-table').show()
+        });
+        });
+    //(Quantity, media queries and Customer Location)
     
             
 
