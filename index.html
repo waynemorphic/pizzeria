@@ -95,16 +95,46 @@
                                 <th scope="col">Pizza Size</th>
                                 <th scope="col">Pizza Crust</th>
                                 <th scope="col">Pizza Toppings</th>
-                                <th scope="col">Order Total</th>
+                                <th scope="col">Total</th>
                             </tr>
                             <tr>
                                 <th id='sz' scope="row"></th>
                                 <th id='cr' scope="row"></th>
                                 <th id='tps' scope="row"></th>
+                                <th id='total'scope="row"></th>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="delivery">
+                        <div class="row">
+                            <div class="col">
+                              <input type="text" id='location' style='width: 40%; margin-top: 2%; margin-bottom: 2%' class="form-control" placeholder="Enter Delivery Location" aria-label="First name">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <table class='order-table'>
+                            <caption style="color: white; text-align: right">Your Total Order Summary</caption>
+                            <tr>
+                                <!-- <th scope="col">Pizza Size</th>
+                                <th scope="col">Pizza Crust</th>
+                                <th scope="col">Pizza Toppings</th>-->
+                                <th scope="col">Location</th> 
+                                <th scope="col">Order Total</th>
+                            </tr>
+                            <tr>
+                                <!-- <th id='sz' scope="row"></th>
+                                <th id='cr' scope="row"></th>
+                                <th id='tps' scope="row"></th>-->
+                                <th id='lct'scope="row"></th> 
                                 <th id='order-total'scope="row"></th>
                             </tr>
                         </table>
                     </div>
+                    <div class="col">
+                        <button id='btnn' type="submit" class="btn btn-primary">Check Out</button>
+                    </div>
+                    
         </div>     
         <div class="container"> 
             <p>
