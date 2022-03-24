@@ -84,7 +84,7 @@ d.querySelector('#btn').addEventListener('click',pizzaPrices)
         //return customerOrderSummary.table;   
     
 
-    //Adding a delivery location cost
+    //Adding a delivery location cost and quantity ordered by customer
     $(document).ready(function(){
         
             $('#btnn').show();
@@ -98,8 +98,11 @@ d.querySelector('#btn').addEventListener('click',pizzaPrices)
 
     function deliveryCost(){ //start of delivery location function
         let lctn = d.querySelector('#location').value;
-        if (lctn !== ''){
-            let cost = totalPrice + 200;
+        let qty = d.querySelector('#qtty').value;
+        let qNumber = parseInt(qty);
+
+        if (lctn !== '' && qty !== ''){
+            let cost = (sizePrice * qNumber) + crustPrice + toppingsPrice + 200;
 
             let lct = d.querySelector('#lct');
             lct.append(lctn);
