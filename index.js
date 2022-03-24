@@ -15,6 +15,8 @@ PizzaOrder.prototype.customerOrder = function(){
     return this.pizzaSize + this.pizzaCrust + this.pizzaToppings + this.Prices;
 }
 
+
+
 // UI logic
 $(document).ready(function(){
 $('#btn').click(function(){
@@ -23,10 +25,12 @@ $('#btn').click(function(){
 });
 
 
-d.querySelector('#btn').addEventListener('click', pizzaPrices)
+d.querySelector('#btn').addEventListener('click',pizzaPrices)
+
+
 //Function for calculating the price of the pizzas when customer makes an order
-    function pizzaPrices (){
-        //prices.preventDefault();
+    function pizzaPrices (p){ //Start of pizza Function
+        p.preventDefault();
 
         let Size = {
             'Small': 550,
@@ -69,98 +73,55 @@ d.querySelector('#btn').addEventListener('click', pizzaPrices)
         let cr = document.querySelector('#cr'); //crust
         cr.append(choosenPizzaCrust)
 
-        let tps = document.querySelector( '#tps' ); //toppings
+        let tps = document.querySelector('#tps'); //toppings
         tps.append(choosenPizzaToppings);
 
-        let op = document.querySelector('#order-total'); //order price/total
+        let op = document.querySelector('#total'); //order price/total
         op.append(totalPrice);
 
         //let customerOrderSummary = <tr> + "<th #='size'>" + choosenPizzaSize + ' -  ' + sizePrice + "</th>" + "<th #='crust'>" + choosenPizzaCrust + ' -  ' + crustPrice + "</th>" + "<th #='toppings'>" + choosenPizzaToppings + ' -  ' + toppingsPrice + "</th>" + "<th #='order-total'>" + totalPrice + "</th>" + '</tr>';
 
-        //return customerOrderSummary.table;
-        
-    }
+        //return customerOrderSummary.table;   
+    
 
-    //Adding a delivery location
+    //Adding a delivery location cost
     $(document).ready(function(){
-        $('#btnn').click(function(){
-            $('.order-table').show()
-        });
-        });
-    //(Quantity, media queries and Customer Location)
-    
-            
-
-        // let s = d.querySelector("#Size")
-        // s.append(choosenPizzaSize);
-        // d.querySelector("#pizzaOrderCrust").innerHTML(choosenPizzaCrust);
-        // d.querySelector("#pizzaOrderToppings").innerHTML(pizzaToppings);
-        // d.querySelector("#order-total").innerHTML(totalPrice);
         
-        
-        //Calculation of pizza order
-        
-
-        // let order = new customerOrder(choosenPizzaSize, choosenPizzaCrust, choosenPizzaToppings);
-        // let customerOrderSummary = '<tr>' + "<th #='size'>" + choosenPizzaSize + ' -  ' + sizePrice + "</th>" + "<th #='crust'>" + choosenPizzaCrust + ' -  ' + crustPrice + "</th>" + "<th #='toppings'>" + choosenPizzaToppings + ' -  ' + toppingsPrice + "</th>" + "<th #='order-total'>" + totalPrice + "</th>" + '</tr>';
-        //$('#order-table').append(customerOrderSummary);
-        
-       
-    
-
-  
-
-
-
-
-
-
-        // console.log(PizzaOrder.customerOrder)
-        
-            
-            //alert (totalPrice);
-            
-            //return totalPrice;
-        
-
-
+            $('#btnn').show();
+            $('#delivery').show();
+            $('#btnn').click(function(){        
       
+        });
+    });
 
-       
-      
+    d.querySelector('#btnn').addEventListener('click', deliveryCost)
+
+    function deliveryCost(){ //start of delivery location function
+        let lctn = d.querySelector('#location').value;
+        if (lctn !== ''){
+            let cost = totalPrice + 200;
+
+            let lct = d.querySelector('#lct');
+            lct.append(lctn);
+
+            let ortc = d.querySelector('#order-total');
+            ortc.append(cost);
+
+            console.log(cost);
+
+            return cost;
+        } else if (lctn == ''){
+            return totalPrice;
+        }
+
         
         
 
-            // let orderTotal = document.querySelector('order-display').value;
+    }// End of second function
 
-            // document.querySelector('#order-display').show(pizzaPrices());
+} // End of first function
 
-            //console.log(totalPrice)
-            
-            
-
-    
-    // console.log(pizzaPrices())
-    //pizzaPrices()
-            
-            
-
-           
-           
-       
-
-
-
-        // $('p#order-display').append(choosenPizza.customerOrder()) //Here, we will display the customer's order in the website
-        // // console.log(choosenPizza.customerOrder());
-       
-        // $('#size option:selected').val();
-        // $('#crust option:selected').val();
-        // $('#toppings option:selected').val();
-    
-
-
-// Business Logic
+   
 
 
         
